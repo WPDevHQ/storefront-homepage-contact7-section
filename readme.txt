@@ -41,8 +41,7 @@ This plugin requires the [Contact Form 7](https://wordpress.org/plugins/contact-
 
 = I can't see the Contact section on the front end =
 
-If you are using the [Homepage Control] (https://wordpress.org/plugins/homepage-control/) plugin you may need to visit the Homepage Control section in the customizer 
-and make sure the "Storefront Homepage Contact7 Section" is enabled.
+If you are using the [Homepage Control] (https://wordpress.org/plugins/homepage-control/) plugin you may need to visit the Homepage Control section in the customizer and make sure the "Storefront Homepage Contact7 Section" is enabled.
 
 == Screenshots ==
 
