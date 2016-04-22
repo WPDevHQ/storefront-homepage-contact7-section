@@ -3,7 +3,7 @@
  * Plugin Name:			Storefront Homepage Contact Form 7 Section
  * Plugin URI:			http://wpdevhq.com/products/storefront-homepage-contact7-section/
  * Description:			Adds a contact section to your Storefront site - powered by the Contact Form 7 plugin.
- * Version:				1.0.0
+ * Version:				1.0.1
  * Author:				WPDevHQ
  * Author URI:			http://wpdevhq.com/
  * Requires at least:	4.0.0
@@ -438,7 +438,7 @@ final class Storefront_Homepage_Contact7_Section {
 			<h2 class="section-title">
 			    <?php esc_attr_e( apply_filters( 'storefront_homepage_contact7_section_title', __( 'Contact Us', 'shc7s' ) ) ); ?>
 			</h2>
-				<?php if ( '' !== $address || '' !== $phone_number || '' !== $email ) : ?>
+				<?php if ( '' !== $address || '' !== $phone_number || '' !== $email || is_active_sidebar( 'shc7s-1' ) ) : ?>
 				<div class="shc7s-contact-details">
 					<ul>
 						<?php if ( '' !== $address ) : ?>

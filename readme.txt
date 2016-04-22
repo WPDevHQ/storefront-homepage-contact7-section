@@ -3,7 +3,7 @@ Contributors: WPDevHQ
 Tags: woocommerce, ecommerce, storefront, contact, form, map, email, address
 Requires at least: 3.5
 Tested up to: 4.5
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -50,6 +50,9 @@ If you are using the [Homepage Control] (https://wordpress.org/plugins/homepage-
 2. Customizer enable section via Homepage Control panel.
 
 == Changelog ==
+
+= 1.0.1 =
+Added check for "is_active_sidebar( 'shc7s-1' )" to render the left pane of the contact us section.
 
 = 1.0.0 =
 Initial release.
