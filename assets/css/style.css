@@ -32,6 +32,10 @@
     margin: 0; 
 }
 
+.storefront-homepage-contact7-section .shc7s-contact-details ul {
+    margin-top: 15px; 
+}
+
 .storefront-homepage-contact7-section .shc7s-contact-details ul li {
     position: relative;
     padding: .53em 0 .53em 1.818em; 
@@ -41,23 +45,31 @@
     padding-bottom: 0; 
 }
 
-.shc7s-address p {
-    margin-bottom: .318em;
+.shc7s-address p,
+.shc7s-phone-number p,
+.shc7s-email p {    
+    background-color: #f2f2f2;
+	margin-bottom: .318em;
+    padding: 3% 6%;
 }
 
 .storefront-homepage-contact7-section .shc7s-contact-details ul li:before {
-    content: '\f124';
+    content: '\f1d9';
     font-family: "FontAwesome";
     position: absolute;
-    top: 0;
+    top: 8px;
     left: 0;
     line-height: 2.244;
     font-size: 1.2em;
     font-weight: 700;
+	padding: 0 2.5%;
+	background-color: #60646c;
+	width: 20px;
+    text-align: center;
 }
 
 .storefront-homepage-contact7-section .shc7s-contact-details ul li.shc7s-phone-number:before {
-    content: '\f095'; 
+    content: '\f095';	
 }
 
 .storefront-homepage-contact7-section .shc7s-contact-details ul li.shc7s-email:before {
@@ -75,8 +87,6 @@
     padding: 0; 
 }
 
-
-
 .storefront-homepage-contact7-section span.wpcf7-form-control-wrap .your-email {    
 	width: 55%;
 	float: left;
@@ -87,15 +97,44 @@
     width: 55%;
 }
 
+.storefront-homepage-contact7-section input[type="text"], 
+.storefront-homepage-contact7-section input[type="email"], 
+.storefront-homepage-contact7-section textarea {
+    border-radius: 0;
+}
+
+.shc7s-widget-area .widget .textwidget p,
 .storefront-homepage-contact7-section .wpcf7 p {
     margin-bottom: .75em;
 }
 
 .shc7s-widget-area .widget h3.widget-title {
-    font-size: 1.157em;
-    padding-bottom: .53em;
+    font-size: 1.137em;
+    padding: 2% 3%;
     margin-bottom: .53em;
     text-transform: uppercase;
+	background-color: #f2f2f2;
+}
+
+.shc7s-widget-area .widget .textwidget {
+    padding: 3%;
+    background-color: #f2f2f2;
+}
+
+.shc7s-widget-area .widget .product_list_widget li  {
+    padding-left: 15%;
+}
+
+.shc7s-widget-area .widget .product_list_widget li:before  {
+    content: '\f1da';
+}
+
+.shc7s-widget-area .widget_shopping_cart .product_list_widget li a.remove {
+    opacity: 0;
+}
+
+.shc7s-widget-area .widget_shopping_cart .product_list_widget li:before {
+	content: '\f217';
 }
 
 @media screen and (min-width: 768px) {

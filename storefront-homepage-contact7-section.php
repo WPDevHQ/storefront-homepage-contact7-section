@@ -1,9 +1,9 @@
 <?php
 /**
  * Plugin Name:			Storefront Homepage Contact Form 7 Section
- * Plugin URI:			http://wpdevhq.com/products/storefront-homepage-contact7-section/
+ * Plugin URI:			http://wpdevhq.com/portfolio/storefront-homepage-contact7-section/
  * Description:			Adds a contact section to your Storefront site - powered by the Contact Form 7 plugin.
- * Version:				1.0.1
+ * Version:				1.0.2
  * Author:				WPDevHQ
  * Author URI:			http://wpdevhq.com/
  * Requires at least:	4.0.0
@@ -392,9 +392,11 @@ final class Storefront_Homepage_Contact7_Section {
 	public function shc7s_styles() {
 		wp_enqueue_style( 'shc7s-styles', plugins_url( '/assets/css/style.css', __FILE__ ) );
 
-		$bg_color			= apply_filters( 'storefront_homepage_contact_section_bg', storefront_get_content_background_color() );
-		$accent_color		= get_theme_mod( 'storefront_accent_color', apply_filters( 'storefront_default_accent_color', '#FFA107' ) );
-		$overlay_opacity	= apply_filters( 'storefront_homepage_contact_section_overlay', .8 );
+		$bg_color			= apply_filters( 'storefront_homepage_contact7_section_bg', storefront_get_content_background_color() );
+		$accent_color		= get_theme_mod( 'storefront_accent_color', apply_filters( 'storefront_default_accent_color', '#ffffff' ) );
+		$details_color		= get_theme_mod( 'storefront_button_text_color', apply_filters( 'storefront_default_button_text_color', '#ffffff' ) );
+		$details_bg_color	= get_theme_mod( 'storefront_button_background_color', apply_filters( 'storefront_default_button_background_color', '#60646c' ) );
+		$overlay_opacity	= apply_filters( 'storefront_homepage_contact7_section_overlay', .8 );
 
 		// Get RGB color of overlay from HEX
 		if ( Storefront_Homepage_Contact7_Section::sanitize_hex_color( $bg_color ) ) {
@@ -409,7 +411,7 @@ final class Storefront_Homepage_Contact7_Section {
 		}
 
 		.storefront-homepage-contact7-section .shc7s-contact-details ul li:before {
-			color: ' . $accent_color . ';
+			color: ' . $details_color . '; background-color: ' . $details_bg_color . ';
 		}';
 
 		wp_add_inline_style( 'shc7s-styles', $shc7s_style );
@@ -446,11 +448,11 @@ final class Storefront_Homepage_Contact7_Section {
 						<?php endif; ?>
 
 						<?php if ( '' !== $phone_number ) : ?>
-						<li class="shc7s-phone-number"><?php esc_attr_e( $phone_number ); ?></li>
+						<li class="shc7s-phone-number"><?php echo wpautop( esc_attr( $phone_number ) ); ?></li>
 						<?php endif; ?>
 
 						<?php if ( '' !== $email ) : ?>
-						<li class="shc7s-email"><?php esc_attr_e( $email ); ?></li>
+						<li class="shc7s-email"><?php echo wpautop( esc_attr( $email ) ); ?></li>
 						<?php endif; ?>
 					</ul>
 					<?php if ( is_active_sidebar( 'shc7s-1' ) ) { ?>
